@@ -1,0 +1,200 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Animated Background */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
+    animation: bgPulse 6s infinite alternate;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the navbar items */
+    align-items: center;
+    padding: 20px;
+    background: black;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: red;
+    margin-right: 40px; /* Space between logo and links */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Space between nav links */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: red;
+}
+
+/* Download Now Button in Navbar */
+.download-now-button {
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4);
+}
+
+.download-now-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.6);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 150px 20px; /* Adjusted for fixed navbar */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: red;
+    text-shadow: 0 0 15px red;
+}
+
+.animated-text {
+    display: inline-block;
+    animation: flyText 5s infinite alternate;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(255, 0, 0, 0.6);
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.features-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px;
+    text-align: center;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.feature-card p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes bgPulse {
+    0% {
+        background: radial-gradient(circle, rgba(255, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+    }
+    100% {
+        background: radial-gradient(circle, rgba(255, 50, 50, 0.4), rgba(0, 0, 0, 1));
+    }
+}
+
+@keyframes flyText {
+    0% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
